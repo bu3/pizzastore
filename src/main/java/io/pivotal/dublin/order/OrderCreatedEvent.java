@@ -1,5 +1,6 @@
-package io.pivotal.dublin.pizza;
+package io.pivotal.dublin.order;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,11 +9,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@AllArgsConstructor
 @EqualsAndHashCode
-public class PizzaOrder {
+public class OrderCreatedEvent {
 
-    private String pizza;
-    private String city;
-    private Double amount;
-
+    private Long orderId;
 }
