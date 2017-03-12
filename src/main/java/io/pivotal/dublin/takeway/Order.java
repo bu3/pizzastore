@@ -1,41 +1,35 @@
-package io.pivotal.dublin.order;
+package io.pivotal.dublin.takeway;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.List;
 
+@Getter
+@Setter
 @ToString
 @EqualsAndHashCode
-@Entity(name = "Booking")
+@Entity
 public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @NotEmpty
     @Column
-    private String pizza;
+    private String item;
 
-    public Long getId() {
-        return id;
-    }
+    @NotEmpty
+    @Column
+    private String address;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getPizza() {
-        return pizza;
-    }
-
-    public void setPizza(String pizza) {
-        this.pizza = pizza;
-    }
 }

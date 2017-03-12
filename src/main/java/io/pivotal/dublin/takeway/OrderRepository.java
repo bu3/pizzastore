@@ -1,4 +1,4 @@
-package io.pivotal.dublin.order;
+package io.pivotal.dublin.takeway;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
